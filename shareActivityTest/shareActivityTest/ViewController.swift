@@ -69,7 +69,7 @@ class ActivityItemProvider: UIActivityItemProvider {
     override var item: Any {
         let data = try! Data(contentsOf: remoteUrl)
         try! data.write(to: tempUrl)
-        return data
+        return tempUrl
     }
     
     init(url: URL) {
